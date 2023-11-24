@@ -184,6 +184,6 @@ watch(cartItemsLength, (newData) => {
     border: 1px solid black;
     background: #fff;
     border-radius: 15px;
-    font-size: 30px;
+    font-size: 20px;
   }
 </style>
