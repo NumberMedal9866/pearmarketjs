@@ -10,7 +10,7 @@
     :key="item.id"
   >
     <RouterLink :to="`product/${item.id}`" class="card">
-      <div @click.stop="takeItem(item.id)">
+      <div @click.stop="takeItem(item.id)" class="card-holder-item-set">
         <img :src="item.thumbnail" alt="" />
         <p>{{ item.title }}</p>
       </div>
@@ -170,6 +170,10 @@ watch(cartItemsLength, (newData) => {
 <style lang="scss" scoped>
   .wrapper{
         margin: 100px auto;
+        @media (max-width: 840px) {
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
         display: flex;
         // justify-content: space-between;
         flex-wrap: wrap;
@@ -177,8 +181,12 @@ watch(cartItemsLength, (newData) => {
         gap: 15px;
   }
   .sel{
+    color: #000;
     height: max-content;
     margin-left: 100px;
+    @media (max-width: 840px) {
+      margin-left: 10px;
+    }
     padding: 5px 20px;
     width: max-content;
     border: 1px solid black;
